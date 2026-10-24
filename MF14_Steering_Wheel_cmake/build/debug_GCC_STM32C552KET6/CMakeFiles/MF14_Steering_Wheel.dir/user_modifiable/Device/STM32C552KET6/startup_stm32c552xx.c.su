@@ -1,0 +1,4 @@
+/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/user_modifiable/Device/STM32C552KET6/startup_stm32c552xx.c:256:25:Reset_Handler	40	static,ignoring_inline_asm
+/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/user_modifiable/Device/STM32C552KET6/startup_stm32c552xx.c:277:13:HardFault_Handler	4	static
+/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/user_modifiable/Device/STM32C552KET6/startup_stm32c552xx.c:288:6:Default_IRQHandler	8	static
+/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/user_modifiable/Device/STM32C552KET6/startup_stm32c552xx.c:299:13:Default_IRQHandler_Hook	4	static

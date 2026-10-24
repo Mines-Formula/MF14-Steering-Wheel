@@ -1,0 +1,5 @@
+/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/stm32c5xx_drivers/ll/stm32c5xx_ll_bus.h:878:22:LL_AHB2_GRP1_EnableClock	48	static,ignoring_inline_asm
+/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/stm32c5xx_drivers/hal/stm32c5xx_hal_rcc.h:1422:22:HAL_RCC_ADC12_EnableClock	8	static
+/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/generated/hal/mx_adc1.c:31:19:mx_adc1_init	32	static
+/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/generated/hal/mx_adc1.c:81:6:mx_adc1_deinit	8	static
+/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/generated/hal/mx_adc1.c:88:19:mx_adc1_gethandle	4	static

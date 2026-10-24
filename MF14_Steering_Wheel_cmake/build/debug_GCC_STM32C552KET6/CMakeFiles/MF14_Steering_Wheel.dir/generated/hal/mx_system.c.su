@@ -1,0 +1,4 @@
+/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/generated/hal/mx_system.c:32:17:mx_system_init	8	static
+/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/generated/hal/mx_system.c:166:6:SysTick_Handler	8	static
+/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/generated/hal/mx_system.c:176:24:pre_system_init_hook	4	static
+/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/generated/hal/mx_system.c:188:24:post_system_init_hook	4	static

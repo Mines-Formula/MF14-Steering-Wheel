@@ -1,0 +1,302 @@
+VERSION "MF14V1"
+
+
+NS_ : 
+		NS_DESC_
+		CM_
+		BA_DEF_
+		BA_
+		VAL_
+		CAT_DEF_
+		CAT_
+		FILTER
+		BA_DEF_DEF_
+		EV_DATA_
+		ENVVAR_DATA_
+		SGTYPE_
+		SGTYPE_VAL_
+		BA_DEF_SGTYPE_
+		BA_SGTYPE_
+		SIG_TYPE_REF_
+		VAL_TABLE_
+		SIG_GROUP_
+		SIG_VALTYPE_
+		SIGTYPE_VALTYPE_
+		BO_TX_BU_
+		BA_DEF_REL_
+		BA_REL_
+		BA_DEF_DEF_REL_
+		BU_SG_REL_
+		BU_EV_REL_
+		BU_BO_REL_
+		SG_MUL_VAL_
+
+BS_:
+
+BU_:
+
+
+
+BO_ 1600 EngineData: 8 Vector__XXX
+	SG_ EngineSpeed : 7|16@0+ (1,0) [0|65535] "RPM" Vector__XXX
+	SG_ InletManifoldPressure : 23|16@0+ (100,0) [0|6553500] "kPa" Vector__XXX
+	SG_ InletAirTemp : 39|16@0- (0.1,0) [-3276.8|3276.7] "C" Vector__XXX
+	SG_ ThrottlePosition : 55|16@0+ (1000,0) [0|65.535] "" Vector__XXX
+
+BO_ 1601 FuelVolume: 8 Vector__XXX
+	SG_ FuelVolume : 7|16@0+ (1000000000,0) [0|65535000000000] "" Vector__XXX
+	SG_ FuelMixtureAim : 23|16@0+ (0.01,0) [0|655.35] "" Vector__XXX
+	SG_ FuelPressure : 39|16@0+ (100,0) [0|6553500] "" Vector__XXX
+	SG_ FuelInjectorPrimaryDutyCycle : 55|8@0+ (0.01,0) [0|2.55] "" Vector__XXX
+	SG_ EngineEfficiency : 63|8@0+ (0.01,0) [0|2.55] "" Vector__XXX
+
+BO_ 1602 IgnitionTiming: 8 Vector__XXX
+	SG_ ThrottlePedal : 7|16@0+ (0.001,0) [0|65.535] "" Vector__XXX
+	SG_ EngineLoad : 23|16@0+ (0.000001,0) [0|0.065535] "" Vector__XXX
+	SG_ IgnitionTiming : 39|16@0- (0.1,0) [-3276.8|3276.7] "" Vector__XXX
+	SG_ FuelTimingPrimary : 55|16@0- (0.1,0) [-3276.8|3276.7] "" Vector__XXX
+
+BO_ 1618 FuelSecondary: 8 Vector__XXX
+	SG_ SecondaryInjectorContribution : 7|16@0+ (0.001,0) [0|65.535] "" Vector__XXX
+	SG_ FuelTimingSecondary : 23|16@0+ (0.1,0) [0|6553.5] "" Vector__XXX
+	SG_ FuelInjectorSecondaryDuty : 39|16@0+ (0.01,0) [0|655.35] "" Vector__XXX
+
+BO_ 1621 BrakeSteeringPressures: 8 Vector__XXX
+	SG_ BrakePressureFront : 7|16@0- (1000,0) [-32768000|32767000] "" Vector__XXX
+	SG_ BrakePressureRear : 23|16@0- (1000,0) [-32768000|3276700] "" Vector__XXX
+	SG_ CoolantPressure : 39|16@0- (100,0) [-3276800|32767000] "" Vector__XXX
+	SG_ SteeringPressure : 55|16@0- (1000,0) [-32768000|32767000] "" Vector__XXX
+
+BO_ 1622 MassFlows: 8 Vector__XXX
+	SG_ SteeringAngle : 7|16@0- (0.1,0) [-3276.8|3276.7] "" Vector__XXX
+	SG_ InletMassFlow : 23|16@0+ (0.0001,0) [0|6.5535] "" Vector__XXX
+	SG_ AirboxMassFlow : 39|16@0+ (0.0001,0) [0|6.5535] "" Vector__XXX
+	SG_ FuelFlow : 55|16@0+ (1e-8,0) [0|0.00065535] "" Vector__XXX
+
+BO_ 1623 ShaftSpeedsPressures: 8 Vector__XXX
+	SG_ PrimaryDiffPressure : 7|16@0- (100,0) [-3276800|3276700] "" Vector__XXX
+	SG_ SecondaryDifferentialPressure : 23|16@0+ (100,0) [-3276800|3276700] "" Vector__XXX
+	SG_ GearInputSpeed : 39|16@0+ (0.66667,0) [0|10922.5] "" Vector__XXX
+	SG_ GearOutputSpeed : 55|16@0+ (0.66667,0) [0|10922.5] "" Vector__XXX
+
+BO_ 1624 ECUAccelerationXYZ: 8 Vector__XXX
+	SG_ ECU_AccelX : 7|16@0+ (0.00980665012481,0) [-321.34431129|321.33450464] "" Vector__XXX
+	SG_ ECU_AccelY : 23|16@0+ (0.00980665012481,0) [-321.34431129|321.33450464] "" Vector__XXX
+	SG_ ECUAccelZ : 39|16@0+ (0.00980665012481,0) [-321.34431129|321.33450464] "" Vector__XXX
+
+BO_ 1604 CutState: 8 Vector__XXX
+	SG_ IgnCutCount : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+	SG_ FuelCutCount : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+	SG_ IgnCutAvg : 23|8@0+ (0.01,0) [0|2.55] "" Vector__XXX
+	SG_ FuelCutAvg : 31|8@0+ (0.01,0) [0|2.55] "" Vector__XXX
+	SG_ InjPulseWidth1 : 39|8@0+ (0.0001,0) [0|0.0255] "" Vector__XXX
+	SG_ IgnTimingState : 47|4@0- (1,0) [-8|7] "" Vector__XXX
+	SG_ IgnCutState : 43|4@0+ (1,0) [-8|7] "" Vector__XXX
+	SG_ OilPressure : 55|16@0+ (100,0) [0|6553500] "" Vector__XXX
+
+BO_ 1608 WheelSpeeds: 8 Vector__XXX
+	SG_ WheelSpeedFL : 7|16@0+ (0.0277777777778,0) [0|1820.41666667] "" Vector__XXX
+	SG_ WheelSpeedFR : 23|16@0+ (0.0277777777778,0) [0|1820.41666667] "" Vector__XXX
+	SG_ WheelSpeedRL : 39|16@0+ (0.0277777777778,0) [0|1820.41666667] "" Vector__XXX
+	SG_ WheelSpeedRR : 55|16@0+ (0.0277777777778,0) [0|1820.41666667] "" Vector__XXX
+
+BO_ 1648 FlexFuelBlend1: 8 Vector__XXX
+	SG_ FlexMode : 7|4@0- (1,0) [-8|7] "" Vector__XXX
+	SG_ FlexDiag : 3|4@0- (1,0) [-8|7] "" Vector__XXX
+	SG_ FlexPrimaryTimingBlend : 15|8@0+ (0.01,0) [0|2.55] "" Vector__XXX
+	SG_ FlexSecondaryTimingBlend : 23|8@0+ (0.01,0) [0|2.55] "" Vector__XXX
+	SG_ FlexIgnBlend : 31|8@0+ (0.01,0) [0|2.55] "" Vector__XXX
+	SG_ FlexMixtureBlend : 39|8@0+ (0.01,0) [0|2.55] "" Vector__XXX
+	SG_ FuelComposition : 47|8@0+ (0.01,0) [0|2.55] "" Vector__XXX
+	SG_ FlexIgnition : 55|8@0- (0.5,0) [-64|63.5] "" Vector__XXX
+
+BO_ 1649 FlexFuelBlend2: 8 Vector__XXX
+	SG_ FlexPrimaryTiming : 7|16@0- (0.1,0) [-3276.8|3276.7] "" Vector__XXX
+	SG_ FlexSecondaryTiming : 23|16@0- (0.1,0) [-3276.8|3276.7] "" Vector__XXX
+	SG_ FlexMixtureAim : 39|16@0+ (0.01,0) [0|655.35] "" Vector__XXX
+
+BO_ 1650 DualFuelState: 8 Vector__XXX
+	SG_ AltFuelPressure : 7|16@0+ (0.01,0) [0|655.35] "" Vector__XXX
+	SG_ AltFuelTempOffset : 23|8@0+ (0,-40) [-40|215] "" Vector__XXX
+	SG_ AltFuelEfficiency : 31|8@0+ (0.01,0) [0|2.55] "" Vector__XXX
+	SG_ AltPumpState : 39|4@0- (1,0) [-8|7] "" Vector__XXX
+	SG_ AltPressWarn : 35|1@0+ (1,0) [0|1] "" Vector__XXX
+	SG_ AltPumpRelay : 34|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1609 TempAndVoltage: 8 Vector__XXX
+	SG_ CoolantTemp : 7|8@0+ (1,-40) [-40|215] "" Vector__XXX
+	SG_ OilTemp : 15|8@0+ (1,-40) [-40|215] "" Vector__XXX
+	SG_ FuelTemp : 23|8@0+ (1,-40) [-40|215] "" Vector__XXX
+	SG_ AmbientTemp : 31|8@0+ (1,-40) [-40|215] "" Vector__XXX
+	SG_ AirboxTemp : 39|8@0+ (1,-40) [-40|215] "" Vector__XXX
+	SG_ ECUVoltage : 47|8@0+ (0.1,0) [0|25.5] "" Vector__XXX
+	SG_ FuelUsed : 55|16@0+ (0.00001,0) [0|0.65535] "" Vector__XXX
+
+BO_ 1610 ExhaustLoadLimit: 8 Vector__XXX
+	SG_ ExhaustTemp : 7|16@0+ (0.1,0) [0|6553.5] "" Vector__XXX
+	SG_ EngineLoadAvg : 23|16@0+ (0.001,0) [0|65.535] "" Vector__XXX
+	SG_ EngineSpeedLimit : 39|16@0+ (0.166666666667,0) [0|10922.5] "" Vector__XXX
+	SG_ AmbientPressure : 55|16@0+ (100,0) [0|6553500] "" Vector__XXX
+
+BO_ 1612 EngineStatus: 8 Vector__XXX
+	SG_ EngineRunTime : 7|16@0+ (1,0) [0|65535] "" Vector__XXX
+	SG_ EngineUptime : 23|16@0+ (1,0) [0|65535] "" Vector__XXX
+	SG_ WarningSource : 39|8@0+ (1,0) [0|255] "" Vector__XXX
+	SG_ WarnCoolantTemp : 47|1@0+ (1,0) [0|1] "" Vector__XXX
+	SG_ WarnCoolantPressure : 46|1@0+ (1,0) [0|1] "" Vector__XXX
+	SG_ WarnEngineSpeed : 45|1@0+ (1,0) [0|1] "" Vector__XXX
+	SG_ WarnOilTemp : 44|1@0+ (1,0) [0|1] "" Vector__XXX
+	SG_ WarnOilPressure : 43|1@0+ (1,0) [0|1] "" Vector__XXX
+	SG_ WarnCrankcase : 42|1@0+ (1,0) [0|1] "" Vector__XXX
+	SG_ WarnFuelPressure : 41|1@0+ (1,0) [0|1] "" Vector__XXX
+	SG_ WarnKnock : 40|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1613 States: 8Vector__XXX
+ SG_ Engine_State : 0|4@1+ (1.0000000000,0.00) [0.00|15.00] "" Vector__XXX
+ SG_ Fuel_Pump_State : 4|4@1+ (1.0000000000,0.00) [0.00|15.00] "" Vector__XXX
+ SG_ Anti_Lag_State : 8|4@1+ (1.0000000000,0.00) [0.00|15.00] "" Vector__XXX
+ SG_ Launch_State : 12|4@1+ (1.0000000000,0.00) [0.00|15.00] "" Vector__XXX
+ SG_ Boost_Aim_State : 16|4@1+ (1.0000000000,0.00) [0.00|15.00] "" Vector__XXX
+ SG_ Engine_Over_Run_State : 24|4@1+ (1.0000000000,0.00) [0.00|15.00] "" Vector__XXX
+ SG_ Fuel_State : 28|4@1+ (1.0000000000,0.00) [0.00|15.00] "" Vector__XXX
+ SG_ Knock_State : 36|4@1+ (1.0000000000,0.00) [0.00|15.00] "" Vector__XXX
+ SG_ Throttle_Aim_State : 40|4@1+ (1.0000000000,0.00) [0.00|15.00] "" Vector__XXX
+ SG_ Close_Loop_State : 44|4@1+ (1.0000000000,0.00) [0.00|15.00] "" Vector__XXX
+ SG_ Gear : 48|4@1+ (1.0000000000,0.00) [0.00|15.00] "" Vector__XXX
+ SG_ Engine_Reference_State : 52|4@1+ (1.0000000000,0.00) [0.00|15.00] "" Vector__XXX
+ SG_ Engine_Speed_Limit_State : 56|8@1+ (1.0000000000,0.00) [0.00|255.00] "" Vector__XXX
+
+BO_ 1614 DriverSwitches: 8 Vector__XXX
+	SG_ AntiLagDiag : 7|4@0- (1,0) [-8|7] "" Vector__XXX
+	SG_ LaunchDiag : 3|4@0- (1,0) [-8|7] "" Vector__XXX
+	SG_ BoostCtrlDiag : 15|4@0- (1,0) [-8|7] "" Vector__XXX
+	SG_ FuelCutState : 11|4@0- (1,0) [-8|7] "" Vector__XXX
+	SG_ CLFuelDiag : 23|4@0- (1,0) [-8|7] "" Vector__XXX
+	SG_ OilPressLow : 19|1@0+ (1,0) [0|1] "" Vector__XXX
+	SG_ PitSwitch : 18|1@0+ (1,0) [0|1] "" Vector__XXX
+	SG_ LaunchSwitch : 17|1@0+ (1,0) [0|1] "" Vector__XXX
+	SG_ TractionSwitch : 16|1@0+ (1,0) [0|1] "" Vector__XXX
+	SG_ BrakeState : 31|1@0+ (1,0) [0|1] "" Vector__XXX
+	SG_ AntiLagSwitch : 30|1@0+ (1,0) [0|1] "" Vector__XXX
+	SG_ RunSwitch : 29|1@0+ (1,0) [0|1] "" Vector__XXX
+	SG_ NeutralSwitch : 28|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1664 GPS_Data: 8 Vector__XXX
+ 	SG_ Latitude : 7|32@0- (0.0000001000,0.00) [-214.75|214.75] "degrees" Vector__XXX
+	SG_ Longitude : 39|32@0- (0.0000001000,0.00) [-214.75|214.75] "degrees" Vector__XXX
+BO_ 1666 GPS_DatePosition: 8 Vector__XXX
+	SG_ Date : 7|24@0+ (1.0000000000,0.00) [0.00|16777216.00] "DDMMYY" Vector__XXX
+ 	SG_ Valid : 31|8@0- (1.0000000000,0.00) [0.00|255.00] "" Vector__XXX
+	SG_ True_Course : 39|16@0- (0.1000000015,0.00) [-3276.80|3276.70] "Deg" Vector__XXX
+ 	SG_ HDOP : 55|8@0+ (0.1000000015,0.00) [0.00|25.50] "" Vector__XXX
+ 	SG_ Satellites : 63|8@0+ (1.0000000000,0.00) [0.00|255.00] "" Vector__XXX
+BO_ 1667 GPS_Magnetic_Variation: 8 Vector__XXX
+ 	SG_ Magnetic_Variation : 7|16@0- (0.1000000015,0.00) [-3276.80|3276.70] "Deg" Vector__XXX
+ 	SG_ DGPS_Station_ID : 23|8@0+ (1.0000000000,0.00) [0.00|255.00] "" Vector__XXX
+ 	SG_ FAA_Mode : 39|8@0- (1.0000000000,0.00) [-128.00|127.00] "" Vector__XXX
+ 	SG_ Fix_Quality : 47|8@0+ (1.0000000000,0.00) [-128.00|127.00] "" Vector__XXX
+ 	SG_ WGS84_Height_Above_Geoid : 55|16@0+ (0.1000000015,0.00) [-3276.80|3276.70] "m" Vector__XXX
+BO_ 1665 GPS_TimeSpeedAltitude : 8 Vector__XXX
+ 	SG_ Time : 7|32@0+ (1.0000000000,0.00) [0.00|4294967296.00] "HHMMSS.sss" Vector__XXX
+ 	SG_ Speed : 39|16@0+ (0.1000000015,0.00) [0.00|6553.50] "km/h" Vector__XXX
+ 	SG_ Altitude : 55|16@0- (0.1000000015,0.00) [-3276.80|3276.70] "m" Vector__XXX
+
+BO_ 1280 PDM_States: 8 Vector__XXX
+	SG_ CompoundID M : 4|4@1+ (1,0) [0|16] "" Vector__XXX
+	SG_ Total_Current m3M : 39|8@0+ (1,0) [0|255] "A" Vector__XXX
+	
+BO_ 1281 PDM_Curr: 8 Vector__XXX
+	SG_ CompoundID M : 7|8@0+ (1,0) [0|255] "A" Vector__XXX
+	SG_ Curr_ShiftDown1 m0M : 15|8@0+ (0.5,0) [0|127.5] "A" Vector__XXX
+	SG_ Curr_ShiftDown2 m0M : 23|8@0+ (0.5,0) [0|127.5] "A" Vector__XXX
+	SG_ Curr_ShiftUp1 m0M : 31|8@0+ (0.5,0) [0|127.5] "A" Vector__XXX
+	SG_ Curr_ShiftUp2 m0M : 39|8@0+ (0.5,0) [0|127.5] "A" Vector__XXX
+	SG_ Curr_FuelPump m0M : 47|8@0+ (0.5,0) [0|127.5] "A" Vector__XXX
+	SG_ Curr_WaterPump m0M : 55|8@0+ (0.5,0) [0|127.5] "A" Vector__XXX
+	SG_ Curr_Fan m0M : 63|8@0+ (0.5,0) [0|127.5] "A" Vector__XXX
+	SG_ Curr_Injector m1M : 15|8@0+ (0.5,0) [0|127.5] "A" Vector__XXX
+	SG_ Curr_ECU m1M : 23|8@0+ (0.2,0) [0|55] "A" Vector__XXX
+	SG_ Curr_RDAQ m1M : 31|8@0+ (0.2,0) [0|55] "A" Vector__XXX
+	SG_ Curr_BSPD m1M : 39|8@0+ (0.2,0) [0|55] "A" Vector__XXX
+	SG_ Curr_FlexFuel m1M : 47|8@0+ (0.2,0) [0|55] "A" Vector__XXX
+	SG_ Curr_Lambda m1M : 55|8@0+ (0.2,0) [0|55] "A" Vector__XXX
+	SG_ Curr_Coil m2M : 15|8@0+ (0.2,0) [0|55] "A" Vector__XXX
+
+BO_ 1283 PDM_Volt: 8 Vector__XXX
+	SG_ CompoundID M : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+	SG_ Volt_ShiftDown m0M : 15|8@0+ (0.2,0) [0|55] "V" Vector__XXX
+	SG_ Volt_ShiftDown2 m0M : 23|8@0+ (0.2,0) [0|55] "V" Vector__XXX
+	SG_ Volt_ShiftUp1 m0M : 31|8@0+ (0.2,0) [0|55] "V" Vector__XXX
+	SG_ Volt_ShiftUp2 m0M : 39|8@0+ (0.2,0) [0|55] "V" Vector__XXX
+	SG_ Volt_FuelPump m0M : 47|8@0+ (0.2,0) [0|55] "V" Vector__XXX
+	SG_ Volt_WaterPump m0M : 55|8@0+ (0.2,0) [0|55] "V" Vector__XXX
+	SG_ Volt_Fan m0M : 63|8@0+ (0.2,0) [0|55] "V" Vector__XXX
+	SG_ Volt_Injfector m1M : 15|8@0+ (0.2,0) [0|55] "V" Vector__XXX
+	SG_ Volt_ECU m1M : 23|8@0+ (0.2,0) [0|55] "V" Vector__XXX
+	SG_ Volt_RDAQ m1M : 31|8@0+ (0.2,0) [0|55] "V" Vector__XXX
+	SG_ Volt_BSPD m1M : 39|8@0+ (0.2,0) [0|55] "V" Vector__XXX
+	SG_ Volt_FlexFuel m1M : 47|8@0+ (0.2,0) [0|55] "V" Vector__XXX
+	SG_ Volt_Lambda m1M : 55|8@0+ (0.2,0) [0|55] "V" Vector__XXX
+	SG_ Volt_Coil m2M : 15|8@0+ (0.2,0) [0|55] "V" Vector__XXX
+
+
+BO_ 2033 Steering_Buttons: 8 Vector__XXX
+	SG_ Button1State : 7|16@0+ (1,0) [0|65535] "" Vector__XXX
+	SG_ Button2State : 23|16@0+ (1,0) [0|65535] "" Vector__XXX
+	SG_ Button3State : 39|16@0+ (1,0) [0|65535] "" Vector__XXX
+	SG_ Button4State : 55|16@0+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 2034 Steering_Dial: 2 Vector__XXX
+	SG_ DialPosition : 7|16@0+ (0.001,0) [0|65] "" Vector__XXX
+
+
+
+
+
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_  "DatabaseVersion" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_  "DatabaseCompiler" STRING ;
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_DEF_DEF_  "DatabaseVersion" "DEMO PLUS";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "ProtocolType" "";
+BA_DEF_DEF_  "DatabaseCompiler" "";
+BA_ "ProtocolType" "J1939";
+BA_ "BusType" "CAN";
+BA_ "DatabaseCompiler" "CSS ELECTRONICS (WWW.CSSELECTRONICS.COM)";
+BA_ "DatabaseVersion" "1.0.0";
+BA_ "VFrameFormat" BO_ 1600 3;
+
+SG_MUL_VAL_ 2147488384 Total_Current CompoundID 3-3;
+SG_MUL_VAL_ 1281 Curr_ShiftDown1 CompoundID 0-0;
+SG_MUL_VAL_ 1281 Curr_ShiftDown2 CompoundID 0-0;
+SG_MUL_VAL_ 1281 Curr_ShiftUp1 CompoundID 0-0;
+SG_MUL_VAL_ 1281 Curr_ShiftUp2 CompoundID 0-0;
+SG_MUL_VAL_ 1281 Curr_FuelPump CompoundID 0-0;
+SG_MUL_VAL_ 1281 Curr_WaterPump CompoundID 0-0;
+SG_MUL_VAL_ 1281 Curr_Fan CompoundID 0-0;
+SG_MUL_VAL_ 1281 Curr_Injector CompoundID 1-1;
+SG_MUL_VAL_ 1281 Curr_ECU CompoundID 1-1;
+SG_MUL_VAL_ 1281 Curr_RDAQ CompoundID 1-1;
+SG_MUL_VAL_ 1281 Curr_BSPD CompoundID 1-1;
+SG_MUL_VAL_ 1281 Curr_FlexFuel CompoundID 1-1;
+SG_MUL_VAL_ 1281 Curr_Lambda CompoundID 1-1;
+SG_MUL_VAL_ 1281 Curr_Coil CompoundID 2-2;
+SG_MUL_VAL_ 1283 Volt_ShiftDown CompoundID 0-0;
+SG_MUL_VAL_ 1283 Volt_ShiftDown2 CompoundID 0-0;
+SG_MUL_VAL_ 1283 Volt_ShiftUp1 CompoundID 0-0;
+SG_MUL_VAL_ 1283 Volt_ShiftUp2 CompoundID 0-0;
+SG_MUL_VAL_ 1283 Volt_FuelPump CompoundID 0-0;
+SG_MUL_VAL_ 1283 Volt_WaterPump CompoundID 0-0;
+SG_MUL_VAL_ 1283 Volt_Fan CompoundID 0-0;
+SG_MUL_VAL_ 1283 Volt_Injfector CompoundID 1-1;
+SG_MUL_VAL_ 1283 Volt_ECU CompoundID 1-1;
+SG_MUL_VAL_ 1283 Volt_RDAQ CompoundID 1-1;
+SG_MUL_VAL_ 1283 Volt_BSPD CompoundID 1-1;
+SG_MUL_VAL_ 1283 Volt_FlexFuel CompoundID 1-1;
+SG_MUL_VAL_ 1283 Volt_Lambda CompoundID 1-1;
+SG_MUL_VAL_ 1283 Volt_Coil CompoundID 2-2;

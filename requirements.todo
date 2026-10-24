@@ -1,0 +1,9 @@
+
+Requirement	Item ID
+The system shall be able to communicate over the CAN line at 1 Mb/s	SOFT-210
+The system shall be able to receive all button states with 10ms of latency	SOFT-211
+The system shall be able to receive the dial position within 10ms of latency	SOFT-212
+The system shall distribute all button states over the CAN line at 50Hz	SOFT-213
+The system shall distribute the dial position over the CAN line at 50Hz	SOFT-214
+The system shall fit all of its data into 2 can messages	SOFT-215
+The system's CAN messages shall be able to integrate with the Motec M150	SOFT-216

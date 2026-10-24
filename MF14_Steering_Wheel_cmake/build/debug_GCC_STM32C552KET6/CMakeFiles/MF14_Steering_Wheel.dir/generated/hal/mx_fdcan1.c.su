@@ -1,0 +1,13 @@
+/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/stm32c5xx_drivers/ll/stm32c5xx_ll_bus.h:878:22:LL_AHB2_GRP1_EnableClock	48	static,ignoring_inline_asm
+/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/stm32c5xx_drivers/ll/stm32c5xx_ll_bus.h:2122:22:LL_APB1_GRP2_EnableClock	48	static,ignoring_inline_asm
+/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/stm32c5xx_drivers/ll/stm32c5xx_ll_bus.h:2166:22:LL_APB1_GRP2_DisableClock	40	static,ignoring_inline_asm
+/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/stm32c5xx_drivers/ll/stm32c5xx_ll_bus.h:2185:22:LL_APB1_GRP2_ForceReset	16	static
+/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/stm32c5xx_drivers/ll/stm32c5xx_ll_bus.h:2204:22:LL_APB1_GRP2_ReleaseReset	16	static
+/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/stm32c5xx_drivers/hal/stm32c5xx_hal_rcc.h:1355:22:HAL_RCC_GPIOA_EnableClock	8	static
+/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/stm32c5xx_drivers/hal/stm32c5xx_hal_rcc.h:1363:22:HAL_RCC_GPIOB_EnableClock	8	static
+/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/stm32c5xx_drivers/hal/stm32c5xx_hal_rcc.h:1895:22:HAL_RCC_FDCAN_EnableClock	8	static
+/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/stm32c5xx_drivers/hal/stm32c5xx_hal_rcc.h:2093:22:HAL_RCC_FDCAN_DisableClock	8	static
+/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/stm32c5xx_drivers/hal/stm32c5xx_hal_rcc.h:3572:22:HAL_RCC_FDCAN_Reset	8	static
+/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/generated/hal/mx_fdcan1.c:31:21:mx_fdcan1_init	104	static
+/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/generated/hal/mx_fdcan1.c:140:6:mx_fdcan1_deinit	8	static
+/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/generated/hal/mx_fdcan1.c:156:21:mx_fdcan1_gethandle	4	static

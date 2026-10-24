@@ -1,0 +1,13 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/build/debug_GCC_STM32C552KET6/cmake_install.cmake",
+		"/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/build/debug_GCC_STM32C552KET6/arch/cmsis/cmake_install.cmake",
+		"/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/build/debug_GCC_STM32C552KET6/stm32c5xx_dfp/cmake_install.cmake",
+		"/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/build/debug_GCC_STM32C552KET6/stm32c5xx_drivers/cmake_install.cmake",
+		"/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/build/debug_GCC_STM32C552KET6/utilities/syscalls/cmake_install.cmake",
+		"/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/build/debug_GCC_STM32C552KET6/generated/hal/cmake_install.cmake",
+		"/home/haustintexas/Desktop/Dev/Mines-Formula/DBCFiles/MF14-Steering-Wheel/MF14_Steering_Wheel_cmake/build/debug_GCC_STM32C552KET6/generated/utilities/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -1,0 +1,116 @@
+/**
+  ******************************************************************************
+  * @file           : mx_i2c2.c
+  * @brief          : I2C2 Peripheral initialization
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2026 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the mx_stm32c5xx_hal_drivers_license.md file
+  * in the same directory as the generated code.
+  * If no mx_stm32c5xx_hal_drivers_license.md file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
+
+/* Includes ------------------------------------------------------------------*/
+#include "mx_i2c2.h"
+
+/* Private typedef -----------------------------------------------------------*/
+/* Private define ------------------------------------------------------------*/
+/* Private macro -------------------------------------------------------------*/
+/* Private variables ---------------------------------------------------------*/
+/* Private functions prototype------------------------------------------------*/
+/* Exported variables by reference--------------------------------------------*/
+static hal_i2c_handle_t hI2C2;
+
+/******************************************************************************/
+/* Exported functions for I2C2 in HAL layer */
+/******************************************************************************/
+hal_i2c_handle_t *mx_i2c2_i2c_init(void)
+{
+  hal_i2c_config_t i2c_config;
+
+  if (HAL_I2C_Init(&hI2C2, HAL_I2C2) != HAL_OK)
+  {
+    return NULL;
+  }
+
+  HAL_RCC_I2C2_EnableClock();
+
+  /*
+    Timing automatically calculated with:
+     - I2C2 input clock at 144000000 Hz
+     - I2C clock speed at 100000 Hz
+  */
+  i2c_config.timing           = 0x70D25153;
+  i2c_config.addressing_mode  = HAL_I2C_ADDRESSING_7BIT;
+  i2c_config.own_address1     = 0 << 1U;
+  if (HAL_I2C_SetConfig(&hI2C2, &i2c_config) != HAL_OK)
+  {
+    return NULL;
+  }
+
+  HAL_I2C_EnableAnalogFilter(&hI2C2);
+
+  /* ### I2C2 GPIO Configuration ########################### */
+  /* GPIO Clocks activation */
+  HAL_RCC_GPIOA_EnableClock();
+
+  HAL_RCC_GPIOB_EnableClock();
+
+  hal_gpio_config_t  gpio_config;
+
+  /**
+    [GPIO Pin] ------> [Signal Name]
+
+       PA11    ------>   I2C2_SCL
+    **/
+  gpio_config.mode        = HAL_GPIO_MODE_ALTERNATE;
+  gpio_config.output_type = HAL_GPIO_OUTPUT_OPENDRAIN;
+  gpio_config.pull        = HAL_GPIO_PULL_NO;
+  gpio_config.speed       = HAL_GPIO_SPEED_FREQ_LOW;
+  gpio_config.alternate   = HAL_GPIO_AF_8;
+  HAL_GPIO_Init(HAL_GPIOA, HAL_GPIO_PIN_11, &gpio_config);
+
+  /**
+    [GPIO Pin] ------> [Signal Name]
+
+       PB4     ------>   I2C2_SDA
+    **/
+  gpio_config.mode        = HAL_GPIO_MODE_ALTERNATE;
+  gpio_config.output_type = HAL_GPIO_OUTPUT_OPENDRAIN;
+  gpio_config.pull        = HAL_GPIO_PULL_UP;
+  gpio_config.speed       = HAL_GPIO_SPEED_FREQ_LOW;
+  gpio_config.alternate   = HAL_GPIO_AF_9;
+  HAL_GPIO_Init(HAL_GPIOB, HAL_GPIO_PIN_4, &gpio_config);
+
+  if (HAL_RCC_I2C2_SetKernelClkSource(HAL_RCC_I2C2_CLK_SRC_PSIK) != HAL_OK)
+  {
+    return NULL;
+  }
+
+  return &hI2C2;
+}
+
+void mx_i2c2_i2c_deinit(void)
+{
+  (void)HAL_I2C_DeInit(&hI2C2);
+
+  HAL_RCC_I2C2_Reset();
+
+  HAL_RCC_I2C2_DisableClock();
+
+  /* De-initialize all GPIOA pins associated with I2C2 */
+  HAL_GPIO_DeInit(HAL_GPIOA, HAL_GPIO_PIN_11);
+
+  /* De-initialize all GPIOB pins associated with I2C2 */
+  HAL_GPIO_DeInit(HAL_GPIOB, HAL_GPIO_PIN_4);
+}
+
+hal_i2c_handle_t *mx_i2c2_i2c_gethandle(void)
+{
+  return &hI2C2;
+}
